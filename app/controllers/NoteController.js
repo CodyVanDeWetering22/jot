@@ -18,7 +18,6 @@ function _drawNotes() {
 
 export class NoteController {
     constructor() {
-
         AppState.on('notes', _drawNotes)
 
     }
@@ -27,11 +26,12 @@ export class NoteController {
         try {
             event.preventDefault()
             const form = event.target
-
+            console.log('creating note');
             const noteData = getFormData(form)
-
+            console.log(noteData);
 
             notesService.createNote(noteData)
+
             form.reset()
 
         } catch (error) {
