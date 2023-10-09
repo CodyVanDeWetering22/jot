@@ -6,6 +6,7 @@ import { getFormData } from "../utils/FormHandler.js";
 
 function _drawNotes() {
     const notes = AppState.notes
+    console.log(notes.length);
     let content = ''
     notes.forEach(note => content += note.NoteTemplate)
     setHTML('notes', content)
@@ -17,8 +18,8 @@ function _drawNotes() {
 
 export class NoteController {
     constructor() {
-        _drawNotes()
 
+        AppState.on('notes', _drawNotes)
 
     }
 
