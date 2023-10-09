@@ -22,15 +22,15 @@ export class NoteController {
 
     }
 
-    crateNote(event) {
+    createNote(event) {
         try {
             event.preventDefault()
             const form = event.target
 
-            const eventData = getFormData(form)
+            const noteData = getFormData(form)
 
 
-            notesService.createNote(eventData)
+            notesService.createNote(noteData)
             form.reset()
 
         } catch (error) {

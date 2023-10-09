@@ -13,7 +13,7 @@ export class Note {
 
 
     get NoteTemplate() {
-        return `<p> ${this.name}<p>`
+        return `<p>${this.name}<p>`
     }
 
 

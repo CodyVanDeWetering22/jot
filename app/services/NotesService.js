@@ -10,8 +10,8 @@ class NotesService {
 
 
     createNote(eventData) {
-        const newnote = new Note(eventData)
-        AppState.notes.push(newnote)
+        const newNote = new Note(eventData)
+        AppState.notes.push(newNote)
         AppState.emit('notes')
     }
 }
