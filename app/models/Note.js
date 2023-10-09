@@ -8,12 +8,12 @@ export class Note {
         this.id = generateId()
         this.name = data.name
         this.color = data.color
-        this.date = data.date ? new Date(data.date) : new Date()
+        this.date = data.date ? new Date(data.date).toLocaleString() : new Date().toLocaleString()
     }
 
 
     get NoteTemplate() {
-        return `<p>${this.name}<p>`
+        return `<p>${this.name} ${this.date}<p>`
     }
 
 

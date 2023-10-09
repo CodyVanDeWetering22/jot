@@ -44,13 +44,17 @@
       <div class="row">
         <div class="col-4 p-3 mb-5">
           <h1>JOT</h1>
+          <p>Notes Counter:
+          <div class="fs-2" id="noteTotal"></div>
+          </p>
         </div>
       </div>
       <div class="row">
         <div class="col-5 mt-5 border border-3 border-dark p-2 mx-2">
           <form onsubmit="app.NoteController.createNote(event)">
             <label for="name">Name:</label>
-            <input type="text" minlength="3" maxlength="15" class="name" id="name" placeholder="name">
+            <input type="text" minlength="3" maxlength="15" class="name" id="name" placeholder="name" required>
+            <label for="color"><input type="color" class="color" id="color" name="color" value="0"></label>
             <button type="submit" class="mdi mdi-plus"></button>
             <div id="notes">
             </div>
