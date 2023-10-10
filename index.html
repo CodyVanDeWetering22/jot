@@ -46,23 +46,40 @@
           <h1>JOT</h1>
           <p>Notes Counter:
           <div class="fs-2" id="noteTotal"></div>
-          </p>
+
         </div>
       </div>
       <div class="row">
         <div class="col-5 mt-5 border border-3 border-dark p-2 mx-2">
           <form onsubmit="app.NoteController.createNote(event)">
             <label for="name">Name:</label>
-            <input type="text" minlength="3" maxlength="15" class="name" id="name" placeholder="name" required>
-            <label for="color"><input type="color" class="color" id="color" name="color" value="0"></label>
+            <input type="text" minlength="3" maxlength="15" name="name" class="name" id="name" placeholder="name"
+              required>
+            <label for="color"><input type="color" class="color" id="color" name="color" value="0"></label required>
             <button type="submit" class="mdi mdi-plus"></button>
             <div id="notes">
             </div>
           </form>
         </div>
       </div>
+      <div class="row" id="activeNote">
+        <!-- <div class="col-5 border border-3 border-dark p-2 m-2">
+          <div class="col-12">
+            <p>Name</p>
+          </div>
+          <div class="col-12">
+            <p>Date</p>
+          </div>
+          <div class="col-12">
+            <p>Updated Date</p>
+          </div>
+          <textarea class="w-100 textarea-height"></textarea>
+          <button class="btn btn-success"><i class="mdi mdi-plus"></i></button>
+          <button class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
+        </div> -->
+      </div>
     </div>
-    </div>
+
 
 
 

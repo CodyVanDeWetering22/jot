@@ -17,9 +17,12 @@ class ObservableAppState extends EventEmitter {
   activeNote = null
 
 
+
+
+
   // NOTE Used to load initial data
   init() {
-
+    this.notes = loadState('notes', [Note])
 
   }
 
